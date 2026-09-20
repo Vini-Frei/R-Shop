@@ -474,6 +474,13 @@ class LEn extends L {
       'Only show systems that have games';
 
   @override
+  String get settings_keepScreenOn => 'Keep Screen On';
+
+  @override
+  String get settings_keepScreenOnSubtitle =>
+      'Prevent the device from sleeping while R-Shop is open';
+
+  @override
   String get settings_controllerButtons => 'Controller Buttons';
 
   @override

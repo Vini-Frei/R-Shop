@@ -8,8 +8,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/).
 
 ## [Unreleased]
 
+## [1.7.1] — 2026-09-20
+
 ### Added
 - **Xbox and Xbox 360** — new systems with platform icons, RomM/IGDB mapping, libretro box art, and common folder aliases (`ogxbox`, `x360`, …). Disc-image extensions: `.iso` / `.xiso` / `.xbe` (Xbox) and `.iso` / `.xex` / `.god` / `.zar` / `.xbla` (Xbox 360).
+- **Keep Screen On** — the handheld stays awake while R-Shop is in the foreground. Toggle it under Settings → Display (on by default).
 
 ### Fixed
 - **Auto-extract off by default (#10)** — new systems no longer turn on ZIP extraction just because the console is typically stored zipped. Existing configs keep their current toggle. Enable per system in console settings if you want archives unpacked after download.

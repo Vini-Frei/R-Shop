@@ -475,6 +475,13 @@ class LPt extends L {
       'Mostrar só sistemas com jogos';
 
   @override
+  String get settings_keepScreenOn => 'Manter tela ligada';
+
+  @override
+  String get settings_keepScreenOnSubtitle =>
+      'Impede o aparelho de dormir enquanto o R-Shop está aberto';
+
+  @override
   String get settings_controllerButtons => 'Botões do Controle';
 
   @override

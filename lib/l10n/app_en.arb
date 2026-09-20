@@ -168,6 +168,8 @@
   "settings_homeLayoutCarousel": "Horizontal Carousel",
   "settings_hideEmptyConsoles": "Hide Empty Consoles",
   "settings_hideEmptyConsolesSubtitle": "Only show systems that have games",
+  "settings_keepScreenOn": "Keep Screen On",
+  "settings_keepScreenOnSubtitle": "Prevent the device from sleeping while R-Shop is open",
   "settings_controllerButtons": "Controller Buttons",
   "settings_controllerNintendo": "Nintendo (default)",
   "settings_controllerXbox": "XBOX",

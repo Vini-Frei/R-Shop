@@ -474,6 +474,13 @@ class LEs extends L {
       'Solo mostrar sistemas con juegos';
 
   @override
+  String get settings_keepScreenOn => 'Mantener pantalla encendida';
+
+  @override
+  String get settings_keepScreenOnSubtitle =>
+      'Evita que el dispositivo se duerma con R-Shop abierto';
+
+  @override
   String get settings_controllerButtons => 'Botones del mando';
 
   @override

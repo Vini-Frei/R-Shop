@@ -51,6 +51,10 @@ class _FakeStorageService extends StorageService {
   @override
   Future<void> setHideEmptyConsoles(bool value) async {}
   @override
+  bool getKeepScreenOn() => true;
+  @override
+  Future<void> setKeepScreenOn(bool value) async {}
+  @override
   bool getAllowNonLanHttp() => false;
   @override
   Future<void> setAllowNonLanHttp(bool allowed) async {}
@@ -260,6 +264,11 @@ void main() {
     testWidgets('renders Hide Empty Consoles toggle', (tester) async {
       await tester.pumpWidget(buildTab());
       expect(find.text('HIDE EMPTY CONSOLES'), findsOneWidget);
+    });
+
+    testWidgets('renders Keep Screen On toggle', (tester) async {
+      await tester.pumpWidget(buildTab());
+      expect(find.text('KEEP SCREEN ON'), findsOneWidget);
     });
 
     testWidgets('renders Controller Buttons cycle', (tester) async {

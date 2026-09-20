@@ -18,6 +18,7 @@ import 'services/crash_log_service.dart';
 import 'services/device_info_service.dart';
 import 'services/image_cache_service.dart';
 import 'services/storage_service.dart';
+import 'services/keep_screen_on_service.dart';
 import 'services/haptic_service.dart';
 import 'services/audio_manager.dart';
 import 'services/database_service.dart';
@@ -66,6 +67,7 @@ void main() {
 
     final storageService = StorageService();
     await storageService.init();
+    await KeepScreenOnService.setEnabled(storageService.getKeepScreenOn());
 
     final hapticService = HapticService();
     hapticService.setEnabled(storageService.getHapticEnabled());

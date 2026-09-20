@@ -13,6 +13,7 @@ import '../../providers/download_providers.dart';
 import '../../providers/game_providers.dart';
 import '../../widgets/download_overlay.dart';
 import '../../services/database_service.dart';
+import '../../services/keep_screen_on_service.dart';
 import '../../services/image_cache_service.dart';
 import '../../services/thumbnail_service.dart';
 import '../../widgets/console_hud.dart';
@@ -157,6 +158,8 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen>
       ref.invalidate(onboardingControllerProvider);
       ref.invalidate(bootstrappedConfigProvider);
       ref.invalidate(hideEmptyConsolesProvider);
+      ref.invalidate(keepScreenOnProvider);
+      await KeepScreenOnService.setEnabled(true);
       ref.invalidate(favoriteGamesProvider);
       _hideResetDialog();
       widget.onResetOnboarding?.call();

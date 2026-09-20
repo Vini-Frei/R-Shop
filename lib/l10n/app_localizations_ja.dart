@@ -468,6 +468,12 @@ class LJa extends L {
   String get settings_hideEmptyConsolesSubtitle => 'ゲームのあるシステムだけ表示';
 
   @override
+  String get settings_keepScreenOn => '画面をオンのままにする';
+
+  @override
+  String get settings_keepScreenOnSubtitle => 'R-Shop使用中はスリープしない';
+
+  @override
   String get settings_controllerButtons => 'コントローラーボタン';
 
   @override

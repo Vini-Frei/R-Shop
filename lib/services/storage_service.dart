@@ -34,6 +34,7 @@ class StorageService {
   static const _raEnabledKey = 'ra_enabled';
   static const _raLastSyncKey = 'ra_last_sync';
   static const _hideEmptyConsolesKey = 'hide_empty_consoles';
+  static const _keepScreenOnKey = 'keep_screen_on';
   static const _startHintShownKey = 'start_hint_shown';
   static const _localeOverrideKey = 'locale_override';
   static const _syncTimeoutSecondsKey = 'sync_timeout_seconds';
@@ -427,6 +428,17 @@ class StorageService {
   Future<void> setHideEmptyConsoles(bool value) async {
     _ensureInitialized();
     await _prefs!.setBool(_hideEmptyConsolesKey, value);
+  }
+
+  // Keep screen on while the app is in the foreground (default on).
+  bool getKeepScreenOn() {
+    _ensureInitialized();
+    return _prefs!.getBool(_keepScreenOnKey) ?? true;
+  }
+
+  Future<void> setKeepScreenOn(bool value) async {
+    _ensureInitialized();
+    await _prefs!.setBool(_keepScreenOnKey, value);
   }
 
   // --- Custom Shelves ---

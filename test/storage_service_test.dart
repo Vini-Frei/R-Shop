@@ -224,6 +224,17 @@ void main() {
     });
   });
 
+  group('StorageService — keep screen on', () {
+    test('getKeepScreenOn defaults to true', () {
+      expect(service.getKeepScreenOn(), isTrue);
+    });
+
+    test('setKeepScreenOn + getKeepScreenOn round-trip', () async {
+      await service.setKeepScreenOn(false);
+      expect(service.getKeepScreenOn(), isFalse);
+    });
+  });
+
   group('StorageService — home layout', () {
     test('getHomeLayoutIsGrid defaults to false', () {
       expect(service.getHomeLayoutIsGrid(), isFalse);

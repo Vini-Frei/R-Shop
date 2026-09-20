@@ -8,6 +8,7 @@ import android.os.Looper
 import android.os.StatFs
 import android.util.Log
 import android.view.KeyEvent
+import android.view.WindowManager
 import io.flutter.embedding.android.FlutterActivity
 import io.flutter.plugin.common.EventChannel
 import io.flutter.plugin.common.MethodChannel
@@ -35,6 +36,10 @@ class MainActivity : FlutterActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         Log.d(TAG, "MainActivity onCreate")
+        // Handhelds time out mid-browse if the screen can sleep. Dart syncs
+        // the user preference after storage loads; start on so splash/onboarding
+        // don't dim first.
+        window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
         // Acquire a WiFi multicast lock so mDNS / Bonjour discovery (used by
         // NetworkDiscoveryService for SMB/RomM detection) can actually receive
         // multicast packets on Android. Without this, Android silently drops
@@ -193,6 +198,17 @@ class MainActivity : FlutterActivity() {
                     } catch (e: Exception) {
                         result.error("STAT_ERROR", e.message, null)
                     }
+                }
+                "setKeepScreenOn" -> {
+                    val enabled = call.argument<Boolean>("enabled") ?: true
+                    runOnUiThread {
+                        if (enabled) {
+                            window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
+                        } else {
+                            window.clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
+                        }
+                    }
+                    result.success(null)
                 }
                 "getDeviceMemory" -> {
                     try {

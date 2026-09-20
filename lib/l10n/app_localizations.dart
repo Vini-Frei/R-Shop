@@ -963,6 +963,18 @@ abstract class L {
   /// **'Only show systems that have games'**
   String get settings_hideEmptyConsolesSubtitle;
 
+  /// No description provided for @settings_keepScreenOn.
+  ///
+  /// In en, this message translates to:
+  /// **'Keep Screen On'**
+  String get settings_keepScreenOn;
+
+  /// No description provided for @settings_keepScreenOnSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Prevent the device from sleeping while R-Shop is open'**
+  String get settings_keepScreenOnSubtitle;
+
   /// No description provided for @settings_controllerButtons.
   ///
   /// In en, this message translates to:

@@ -28,6 +28,7 @@ class SettingsGeneralTab extends ConsumerWidget {
     final l = L.of(context);
     final isHomeGrid = ref.watch(homeLayoutProvider);
     final hideEmpty = ref.watch(hideEmptyConsolesProvider);
+    final keepScreenOn = ref.watch(keepScreenOnProvider);
     final layout = ref.watch(controllerLayoutProvider);
     final localeOverride = ref.watch(localeProvider);
     final localeName = localeOverride == null
@@ -82,6 +83,15 @@ class SettingsGeneralTab extends ConsumerWidget {
             value: hideEmpty,
             onChanged: () {
               ref.read(hideEmptyConsolesProvider.notifier).toggle();
+              ref.read(feedbackServiceProvider).tick();
+            },
+          ),
+          SettingsEntry.toggle(
+            title: l.settings_keepScreenOn,
+            subtitle: l.settings_keepScreenOnSubtitle,
+            value: keepScreenOn,
+            onChanged: () {
+              ref.read(keepScreenOnProvider.notifier).toggle();
               ref.read(feedbackServiceProvider).tick();
             },
           ),

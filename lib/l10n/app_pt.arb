@@ -156,6 +156,8 @@
   "settings_homeLayoutCarousel": "Carrossel Horizontal",
   "settings_hideEmptyConsoles": "Ocultar Consoles Vazios",
   "settings_hideEmptyConsolesSubtitle": "Mostrar s\u00f3 sistemas com jogos",
+  "settings_keepScreenOn": "Manter tela ligada",
+  "settings_keepScreenOnSubtitle": "Impede o aparelho de dormir enquanto o R-Shop está aberto",
   "settings_controllerButtons": "Bot\u00f5es do Controle",
   "settings_controllerNintendo": "Nintendo (padr\u00e3o)",
   "settings_controllerXbox": "XBOX",

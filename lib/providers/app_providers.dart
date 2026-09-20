@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../services/storage_service.dart';
 export '../services/storage_service.dart' show ControllerLayout;
+import '../services/keep_screen_on_service.dart';
 import '../services/haptic_service.dart';
 import '../services/audio_manager.dart';
 import '../services/feedback_service.dart';
@@ -291,6 +292,28 @@ final hideEmptyConsolesProvider =
     StateNotifierProvider<HideEmptyConsolesNotifier, bool>((ref) {
   final storage = ref.read(storageServiceProvider);
   return HideEmptyConsolesNotifier(storage);
+});
+
+// ==========================================
+// Keep Screen On
+// ==========================================
+class KeepScreenOnNotifier extends StateNotifier<bool> {
+  final StorageService _storage;
+
+  KeepScreenOnNotifier(this._storage) : super(_storage.getKeepScreenOn());
+
+  Future<void> toggle() async {
+    final newValue = !state;
+    state = newValue;
+    await _storage.setKeepScreenOn(newValue);
+    await KeepScreenOnService.setEnabled(newValue);
+  }
+}
+
+final keepScreenOnProvider =
+    StateNotifierProvider<KeepScreenOnNotifier, bool>((ref) {
+  final storage = ref.read(storageServiceProvider);
+  return KeepScreenOnNotifier(storage);
 });
 
 // ==========================================

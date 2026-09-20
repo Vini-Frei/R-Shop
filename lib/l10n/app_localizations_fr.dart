@@ -475,6 +475,13 @@ class LFr extends L {
       'N\'afficher que les systèmes avec des jeux';
 
   @override
+  String get settings_keepScreenOn => 'Garder l\'écran allumé';
+
+  @override
+  String get settings_keepScreenOnSubtitle =>
+      'Empêche l\'appareil de se mettre en veille tant que R-Shop est ouvert';
+
+  @override
   String get settings_controllerButtons => 'Boutons manette';
 
   @override

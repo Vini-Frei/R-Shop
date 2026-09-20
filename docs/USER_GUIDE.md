@@ -427,6 +427,7 @@ Open Settings from the quick menu (Start) on the home screen.
 | Haptic Feedback | On / Off | On | Vibration on button presses |
 | Sound Effects | On / Off | On | Audio feedback for UI actions |
 | Hide Empty Consoles | On / Off | Off | Hide systems with no games from the home screen |
+| Keep Screen On | On / Off | On | Prevent the Android device from sleeping while R-Shop is open |
 
 ### Sync
 

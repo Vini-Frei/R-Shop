@@ -475,6 +475,13 @@ class LDe extends L {
       'Nur Systeme mit Spielen anzeigen';
 
   @override
+  String get settings_keepScreenOn => 'Bildschirm anlassen';
+
+  @override
+  String get settings_keepScreenOnSubtitle =>
+      'Gerät nicht in den Ruhezustand versetzen, während R-Shop geöffnet ist';
+
+  @override
   String get settings_controllerButtons => 'Controller-Tasten';
 
   @override
