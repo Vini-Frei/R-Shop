@@ -167,7 +167,6 @@ class SourcesNotifier extends StateNotifier<SourcesState> {
         name: model.name,
         targetFolder: '$basePath/$systemId',
         providers: const [],
-        autoExtract: model.isZipped,
       ));
       newIds.add(systemId);
       newNames.add(model.name);

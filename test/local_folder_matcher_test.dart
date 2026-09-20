@@ -76,6 +76,24 @@ void main() {
       expect(result, 'snes');
     });
 
+    test('alias: originalxbox → xbox', () {
+      final result = LocalFolderMatcher.matchFolder(
+          'OriginalXbox', _allSystems, const []);
+      expect(result, 'xbox');
+    });
+
+    test('alias: x360 → xbox360', () {
+      final result =
+          LocalFolderMatcher.matchFolder('x360', _allSystems, const []);
+      expect(result, 'xbox360');
+    });
+
+    test('exact match on xbox360 system.id', () {
+      final result =
+          LocalFolderMatcher.matchFolder('xbox360', _allSystems, const []);
+      expect(result, 'xbox360');
+    });
+
     test('alias: sfc → snes', () {
       final result =
           LocalFolderMatcher.matchFolder('sfc', _allSystems, const []);

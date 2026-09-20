@@ -73,6 +73,20 @@ void main() {
       expect(result, isNotNull);
     });
 
+    test('IGDB ID fallback for xbox', () {
+      final platforms = [_platform(slug: 'microsoft-xbox', igdbId: 11)];
+      final result = RommPlatformMatcher.findMatch('xbox', platforms);
+      expect(result, isNotNull);
+      expect(result!.igdbId, 11);
+    });
+
+    test('IGDB ID fallback for xbox360', () {
+      final platforms = [_platform(slug: 'xbox-360', igdbId: 12)];
+      final result = RommPlatformMatcher.findMatch('xbox360', platforms);
+      expect(result, isNotNull);
+      expect(result!.igdbId, 12);
+    });
+
     test('no match returns null', () {
       final platforms = [_platform(slug: 'snes', igdbId: 19)];
       final result = RommPlatformMatcher.findMatch('atari2600', platforms);

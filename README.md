@@ -101,16 +101,17 @@ Merge games from multiple providers into a single clean library instead of juggl
 
 ## Supported systems
 
-R-Shop supports **66 systems** with icons, RetroAchievements integration, and automatic folder mapping.
+R-Shop supports **68 systems** with icons, RetroAchievements integration, and automatic folder mapping.
 
 Highlights include:
 - **Nintendo:** NES, SNES, N64, GameCube, Wii, Wii U, Switch, GB, GBC, GBA, NDS, 3DS, DSi, Virtual Boy, FDS, Game & Watch
 - **Sony:** PlayStation, PS2, PS3, PSP, PS Vita
 - **Sega:** Master System, Mega Drive, Game Gear, Sega CD, 32X, Saturn, Dreamcast, SG-1000
+- **Microsoft:** Xbox, Xbox 360, MSX
 - **Atari:** 2600, 5200, 7800, Lynx, Jaguar, Jaguar CD, ST
 - **NEC:** TurboGrafx-16, TurboGrafx-CD, PC-FX
 - **SNK:** Neo Geo Pocket, Neo Geo CD
-- **Others:** WonderSwan, ColecoVision, Intellivision, Vectrex, MSX, Amstrad CPC, Commodore 64, Amiga, ZX Spectrum, Arcade, DOS, and more
+- **Others:** WonderSwan, ColecoVision, Intellivision, Vectrex, Amstrad CPC, Commodore 64, Amiga, ZX Spectrum, Arcade, DOS, and more
 
 ---
 

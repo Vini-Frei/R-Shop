@@ -74,7 +74,7 @@ class _ConfigModeScreenState extends ConsumerState<ConfigModeScreen>
   void _handleBack() {
     final state = ref.read(onboardingControllerProvider);
     if (state.hasConsoleSelected) {
-      ref.read(onboardingControllerProvider.notifier).deselectConsole();
+      ref.read(onboardingControllerProvider.notifier).commitSelectedConsole();
       WidgetsBinding.instance.addPostFrameCallback((_) {
         if (mounted) _firstListNode.requestFocus();
       });

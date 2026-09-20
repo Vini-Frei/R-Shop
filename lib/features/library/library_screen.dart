@@ -1451,6 +1451,8 @@ class _LibraryScreenState extends ConsumerState<LibraryScreen>
       'ps3': 'PS3',
       'psp': 'PSP',
       'psvita': 'Vita',
+      'xbox': 'Xbox',
+      'xbox360': '360',
       'mastersystem': 'SMS',
       'megadrive': 'MD',
       'gamegear': 'GG',

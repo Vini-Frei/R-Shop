@@ -509,6 +509,28 @@ class SystemModel {
       accentColor: Color(0xFF7C3AED),
       raConsoleId: 29,
     ),
+    SystemModel(
+      id: 'xbox',
+      name: 'Xbox',
+      manufacturer: 'Microsoft',
+      releaseYear: 2001,
+      isZipped: false,
+      libretroId: 'Microsoft_-_Xbox',
+      romExtensions: ['.iso', '.xiso', '.xbe'],
+      iconName: 'xbox_original.svg',
+      accentColor: Color(0xFF107C10),
+    ),
+    SystemModel(
+      id: 'xbox360',
+      name: 'Xbox 360',
+      manufacturer: 'Microsoft',
+      releaseYear: 2005,
+      isZipped: false,
+      libretroId: 'Microsoft_-_Xbox_360',
+      romExtensions: ['.iso', '.xex', '.god', '.zar', '.xbla'],
+      iconName: 'xbox_360.svg',
+      accentColor: Color(0xFF22C55E),
+    ),
     // ===== AMSTRAD =====
     SystemModel(
       id: 'amstradcpc',

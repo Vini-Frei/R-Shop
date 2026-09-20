@@ -65,7 +65,7 @@ Detected folders are automatically matched to systems. You can toggle systems on
 The main configuration screen. A grid displays all supported systems. For each console you can:
 
 - Set a **target folder** where ROM files will be stored
-- Toggle **auto-extract** for archive files
+- Toggle **auto-extract** for archive files (off by default — zipped libraries stay packed unless you opt in)
 - Toggle **merge mode** to combine results from multiple providers
 - Toggle **auto-sync on app launch** to control whether this system syncs automatically (respects the cooldown setting) or only manually via the quick menu
 - **Add providers** (Web, SMB, FTP, or RomM) with connection details
@@ -398,7 +398,7 @@ The download queue survives app restarts. Active downloads resume from the queue
 
 ### Archive Extraction
 
-ZIP files are extracted automatically when the system has auto-extract enabled. Multi-file games (e.g. PlayStation .bin/.cue pairs) are extracted into subfolders, preserving the file structure.
+ZIP files are extracted automatically only when the system has auto-extract enabled. Auto-extract is **off by default** so existing zipped libraries are not unpacked. Multi-file games (e.g. PlayStation .bin/.cue pairs) are extracted into subfolders, preserving the file structure.
 
 Multi-file games (bin/cue pairs) can also be downloaded as complete folders directly via SMB and FTP providers, without needing archives.
 
@@ -558,7 +558,7 @@ The PlayStation layout uses symbol buttons:
 
 ## Supported Systems
 
-R-Shop supports 29 systems across 5 manufacturers. All systems support archive formats (`.zip`, `.7z`, `.rar`) in addition to their native ROM extensions.
+R-Shop supports 68 systems. All systems support archive formats (`.zip`, `.7z`, `.rar`) in addition to their native ROM extensions.
 
 ### Nintendo
 
@@ -586,6 +586,14 @@ R-Shop supports 29 systems across 5 manufacturers. All systems support archive f
 | PlayStation Portable | `psp` | 2004 | `.iso`, `.cso`, `.pbp`, `.chd` |
 | PlayStation 3 | `ps3` | 2006 | `.iso`, `.pkg` |
 | PlayStation Vita | `psvita` | 2011 | `.vpk` |
+
+### Microsoft
+
+| System | ID | Year | ROM Extensions |
+|--------|----|------|----------------|
+| Xbox | `xbox` | 2001 | `.iso`, `.xiso`, `.xbe` |
+| Xbox 360 | `xbox360` | 2005 | `.iso`, `.xex`, `.god`, `.zar`, `.xbla` |
+| MSX | `msx` | 1983 | `.rom`, `.mx1`, `.mx2`, `.dsk` |
 
 Multi-file systems: PlayStation and PlayStation 2 support `.bin` + `.cue` pairs. When downloading archives containing multiple `.bin` files, R-Shop extracts them into a subfolder preserving the file structure.
 

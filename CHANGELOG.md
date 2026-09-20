@@ -6,6 +6,17 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/).
 
 ---
 
+## [Unreleased]
+
+### Added
+- **Xbox and Xbox 360** — new systems with platform icons, RomM/IGDB mapping, libretro box art, and common folder aliases (`ogxbox`, `x360`, …). Disc-image extensions: `.iso` / `.xiso` / `.xbe` (Xbox) and `.iso` / `.xex` / `.god` / `.zar` / `.xbla` (Xbox 360).
+
+### Fixed
+- **Auto-extract off by default (#10)** — new systems no longer turn on ZIP extraction just because the console is typically stored zipped. Existing configs keep their current toggle. Enable per system in console settings if you want archives unpacked after download.
+- **Console settings persist on Back (#14)** — leaving a system tile now commits auto-extract, auto-sync, and folder changes instead of discarding them.
+
+---
+
 ## [1.6.0] — 2026-04-12
 
 ### Added
